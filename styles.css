@@ -58,13 +58,12 @@ nav a {
   color: #1fdada;
 }
 #weather-cards {
-  position: fixed;
   width: 100%;
   min-height: 100%;
   overflow-y: hidden;
 }
 .search {
-  position: absolute;
+  position: fixed;
   top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -114,7 +113,7 @@ button:hover {
 
 .data-card {
   font-family: "Poppins", sans-serif;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
