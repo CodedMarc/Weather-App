@@ -58,6 +58,7 @@ nav a {
   color: #1fdada;
 }
 #weather-cards {
+  position: fixed;
   width: 100%;
   min-height: 100%;
   overflow-y: hidden;
