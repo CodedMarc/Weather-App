@@ -1,7 +1,15 @@
-const locationText = document.getElementById("city");
-const temperatureText = document.getElementById("temperature");
-const weatherText = document.getElementById("weather-description");
+const locationText = document.querySelector(".city-location");
+const temperatureText = document.querySelector(".temperature");
+const weatherText = document.querySelector(".description");
 const goButton = document.querySelector("button");
+
+const maxTemp = document.querySelector('.max-max');
+const minTemp = document.querySelector('.min-min');
+const feelsLike = document.querySelector('.feels-like');
+const humidity = document.querySelector('.humid-humid');
+const wind = document.querySelector('.wind-wind');
+
+const weatherCard = document.querySelector('.card-content');
 
 let query = document.getElementById("search");
 
@@ -19,8 +27,16 @@ goButton.addEventListener('click', async () => {
     )
     .then(data =>{
         locationText.textContent = data.name;
-        temperatureText.textContent = data.main.temp + "°";
+        temperatureText.textContent = data.main.temp + "°F";
+        feelsLike.textContent = data.main.feels_like + "°F";
+        humidity.textContent = data.main.humidity + "%";
+        maxTemp.textContent = data.main.temp_max + "°F";
+        minTemp.textContent = data.main.temp_min + "°F";
+        wind.textContent = data.wind.speed + "mph";
+
         weatherText.textContent = data.weather[0].description;
+        weatherCard.style.display = 'grid';
+
         console.log(data);
     })
     .catch(err => {
@@ -29,22 +45,17 @@ goButton.addEventListener('click', async () => {
     })
 });
 
+//night mode
 
-//dark mode
-let darkModeButton = document.querySelector('.fa-moon');
-let lightModeButton = document.querySelector('.fa-sun');
+const nightButton = document.querySelector('.fa-moon');
+const lightButton = document.querySelector('.fa-sun');
 
-darkModeButton.addEventListener('click', () => {
-    document.body.style.backgroundColor = '#121212';
-    document.querySelector('h1').style.color = "orange";
-    document.querySelector('p').style.color = "black";
-    document.querySelectorAll('p')[1].style.color = "black";
-    document.querySelector('h3').style.color = "red";
+nightButton.addEventListener('click', () => {
+    document.body.style.backgroundImage = "url('images/henning-witzel-ukvgqriuOgo-unsplash.jpg')";
 })
-lightModeButton.addEventListener('click', ()=>{
-    document.body.style.backgroundColor = "#aec5eb";
-    document.querySelector('h1').style.color = "#040f0f";
-    document.querySelector('p').style.color = "whitesmoke";
-    document.querySelectorAll('p')[1].style.color = "whitesmoke";
-    document.querySelector('h3').style.color = "whitesmoke";
+
+
+lightButton.addEventListener('click', () => {
+    document.body.style.backgroundImage = "url('images/pedro-lastra-Nyvq2juw4_o-unsplash.jpg')";
 })
+

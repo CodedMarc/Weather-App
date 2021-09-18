@@ -8,7 +8,7 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&family=Roboto:ital,wght@0,100;0,400;0,900;1,100&display=swap" rel="stylesheet">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <!--Styles CSS-->
@@ -17,7 +17,10 @@
 <body>
 
     <nav>
-        <a href="#"><h1>Sky Light</h1></a>
+        <div class="logo-box">
+            <span class="fas fa-bolt fa-2x"></span>
+            <a href="#"><h1>Sky Light</h1></a>
+        </div>
         <div class="dark-mode">
             <span class="far fa-moon"></span>
             <span class="fas fa-sun"></span>
@@ -28,18 +31,59 @@
        
         
 
+        <div class="search">
+            <input name="searchQuery"id="search"type="text" placeholder="Enter A City..."id="search-box">
+            <button type="submit">Search</button>
+        </div>
+     
+        <div class="data-card">
 
-            <div class="weather-card">
-                <h3 style="text-align: center;"id="city">Enter Any City Name</h3>
-                <p id="temperature">0°</p>
-                <p id="weather-description">Example:  Houston</p>
-                <div class="search">
-                    <input name="searchQuery"id="search"type="text" placeholder="Enter A City..."id="search-box">
-                    <button type="submit">Go</button>
-                    
-                </div>
+        <div class="card-head">
+            <h1 class="city-location">Get The Weather!</h1>
+        </div>
+
+
+        <div class="card-content">
+
+
+            <div class="temp-box">
+                <h1 class="temperature">°F</h1>
             </div>
 
+            <div class="description-box">
+                <p class="description">Scattered Clouds</p>
+            </div>
+
+            <div class="max-box">
+                <p class="max-temp">Max</p>
+                <p class="max-max"></p>
+            </div>
+
+            <div class="feels-like-box">
+                <p class="feels-like-text">Feels Like</p>
+                <p class="feels-like"></p>
+            </div>
+ 
+
+            <div class="wind-box">
+                <p class="wind">Wind</p>
+                <p class="wind-wind"></p>
+            </div>
+
+            <div class="min-box">
+                <p class="min-temp">Min</p>
+                <p class="min-min"></p>
+            </div>
+
+            <div class="humidity-box">
+                <p class="humidity">Humidity</p>
+                <p class="humid-humid"></p>
+            </div>
+        </div>
+
+
+
+        </div>
       
     </section>
 
