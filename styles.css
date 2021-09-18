@@ -58,6 +58,7 @@ nav a {
 #weather-cards {
   width: 100%;
   min-height: 100vh;
+  overflow-y: hidden;
 }
 .search {
   position: absolute;
